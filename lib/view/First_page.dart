@@ -5,8 +5,6 @@ import 'package:giai_do_ech_xanh/view/Single_play.dart';
 import 'package:giai_do_ech_xanh/view/pay_page.dart';
 class First_page extends StatefulWidget {
   const First_page({super.key});
-
- 
   @override
   State<First_page> createState() => _First_page();
 }
