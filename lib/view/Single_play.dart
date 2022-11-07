@@ -4,8 +4,6 @@ import 'package:giai_do_ech_xanh/view/GamePlay.dart';
 
 class Single_play extends StatefulWidget {
   const Single_play({super.key});
-
- 
   @override
   State<Single_play> createState() => _Single_play();
 }
