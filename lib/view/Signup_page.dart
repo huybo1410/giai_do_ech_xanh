@@ -19,7 +19,7 @@ class _Signup_page extends State<Signup_page> {
         
         title: Text('Dang ky'),
       ),
-      body: Container(
+      body:  Container(
         constraints: BoxConstraints.expand(),
         color: Color.fromRGBO(250, 243, 221, 1),
        child: Column(
@@ -29,61 +29,84 @@ class _Signup_page extends State<Signup_page> {
         Icon(Icons.person,size: 80,),
 
         Container(
-          child: TextField(
-            style: TextStyle(fontSize: 15),
-            decoration: InputDecoration(
-              labelText: 'Tài khoản',
-              labelStyle: TextStyle(color: Colors.black,fontSize: 20,),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              style: TextStyle(fontSize: 15),
+              decoration: InputDecoration(
+                labelText: 'Tài khoản',
+                border: OutlineInputBorder(borderRadius: 
+                 BorderRadius.circular(10)
+             ),
+                
+                ),
               
-              ),
-            
+            ),
           ),width: 350,height: 50,
         ),
 
          Container(
-           child: TextField(
-            style: TextStyle(fontSize: 15),
-            obscureText: true,
-            decoration: InputDecoration(
-              labelText: 'Mật khẩu',
-              labelStyle: TextStyle(color: Colors.black,fontSize: 20,),
+           child: Padding(
+             padding: const EdgeInsets.all(8.0),
+             child: TextField(
+              style: TextStyle(fontSize: 15),
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: 'Mật khẩu',
+                border: OutlineInputBorder(borderRadius: 
+                 BorderRadius.circular(10)
+                ),
     
-              ),
-        ),width: 350,height: 50,
+                ),
+        ),
+           ),width: 350,height: 50,
          ),
 
          Container(
-           child: TextField(
-            style: TextStyle(fontSize: 15),
-            obscureText: true,
-            decoration: InputDecoration(
-              labelText: 'Nhập lại mật khẩu',
-              labelStyle: TextStyle(color: Colors.black,fontSize: 20,),
+           child: Padding(
+             padding: const EdgeInsets.all(8.0),
+             child: TextField(
+              style: TextStyle(fontSize: 15),
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: 'Nhập lại mật khẩu',
+                border: OutlineInputBorder(borderRadius: 
+                 BorderRadius.circular(10)
+                ),
     
-              ),
-        ),width: 350,height: 50,
+                ),
+        ),
+           ),width: 350,height: 50,
          ),
 
          Container(
-           child: TextField(
-            style: TextStyle(fontSize: 15),
-            decoration: InputDecoration(
-              labelText: 'Số điện thoại',
-              labelStyle: TextStyle(color: Colors.black,fontSize: 20,),
-    
-              ),
-        ),width: 350,height: 50,
+           child: Padding(
+             padding: const EdgeInsets.all(8.0),
+             child: TextField(
+              style: TextStyle(fontSize: 15),
+              decoration: InputDecoration(
+                labelText: 'Số điện thoại',
+                border: OutlineInputBorder(borderRadius: 
+                 BorderRadius.circular(10)
+                  ),
+                ),
+        ),
+           ),width: 350,height: 50,
          ),
 
          Container(
-           child: TextField(
-            style: TextStyle(fontSize: 15),
-            decoration: InputDecoration(
-              labelText: 'Email',
-              labelStyle: TextStyle(color: Colors.black,fontSize: 20,),
-    
-              ),
-        ),width: 350,height: 50,
+           child: Padding(
+             padding: const EdgeInsets.all(8.0),
+             child: TextField(
+              style: TextStyle(fontSize: 15),
+              decoration: InputDecoration(
+                labelText: 'Email',
+               border: OutlineInputBorder(borderRadius: 
+                 BorderRadius.circular(10)
+               )
+                ),
+        ),
+           ),width: 350,height: 50,
          ),
 
         Container(
@@ -104,7 +127,8 @@ class _Signup_page extends State<Signup_page> {
         Padding(padding: EdgeInsets.fromLTRB(0, 5, 0, 5)),
              ElevatedButton(
           style: ButtonStyle(
-            backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(104, 176, 171, 1)
+            backgroundColor: MaterialStatePropertyAll<Color>(
+          Color.fromRGBO(104, 176, 171, 1)
             ),
             shape: MaterialStatePropertyAll(
               RoundedRectangleBorder(borderRadius: 
