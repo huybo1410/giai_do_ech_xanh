@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:giai_do_ech_xanh/view/First_page.dart';
 import 'package:giai_do_ech_xanh/components/menu.dart';
+import 'package:giai_do_ech_xanh/view/Login_page.dart';
+import 'package:giai_do_ech_xanh/view/pay_page.dart';
 
 
 void main() {
@@ -20,15 +22,7 @@ class MyApp extends StatelessWidget {
         
         primarySwatch: Colors.green,
       ),
-      home: Scaffold(
-      drawer: Menu_button(),
-      appBar: AppBar(
-        
-        title: Text('Do An'),
-      ),
-      body: Container(child: First_page(),) 
-      
-      )
+      home: Login_page()
     );
   }
 }
