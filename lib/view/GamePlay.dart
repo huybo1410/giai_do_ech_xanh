@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:giai_do_ech_xanh/components/menu.dart';
+import 'package:giai_do_ech_xanh/main.dart';
 
 class GamePlay extends StatefulWidget {
   const GamePlay({super.key});
@@ -125,24 +126,47 @@ class _GamePlay extends State<GamePlay> {
                     context: context, 
                     builder: (BuildContext context)  {
                       return AlertDialog(
-                        iconColor: Colors.green,
+                        backgroundColor: Color.fromRGBO(200, 213, 185,1),
                         title: Text('Mua đáp án ?'), 
                         content: const Text('Bạn sẽ nhận được đáp án tương ứng với câu hỏi hiện tại !'),
                         actions: [
-                          Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: ElevatedButton(
-                              onPressed: (){}, 
-                              child: Text('Có')),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: ElevatedButton(
-                              onPressed: (){}, 
-                              child: Text('Không')),
-                            )
-                          ],)
+                          Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text('Quy đổi: 200 vàng = 1 lượt'),
+                                  IconButton(
+                                    onPressed: (){}, 
+                                    icon: Icon(Icons.add))
+                                ],
+                              ),
+                              Text('Bạn có muốn sử dụng?'),
+                              Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+                                
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: ElevatedButton(
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+                                    minimumSize: MaterialStateProperty.all<Size>(Size(100, 40))
+                                  ),
+                                  onPressed: (){}, 
+                                  child: Text('Có')),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: ElevatedButton(
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                                    minimumSize: MaterialStateProperty.all<Size>(Size(100, 40))
+                                  ),
+                                  onPressed: (){}, 
+                                  child: Text('Không')),
+                                )
+                              ],),
+                            ],
+                          )
                         ],
                       );
                     });
