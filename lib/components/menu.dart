@@ -14,15 +14,17 @@ class Menu_button extends StatelessWidget {
     return new Drawer(child: 
     Container(child: 
     ListView(children: [
+      DrawerHeader(
+        child: Image(image: AssetImage('assets/menu1.jpg'),fit: BoxFit.cover,),
+        decoration: BoxDecoration(color: Colors.white),
+        ),
       
       Padding(
         padding: const EdgeInsets.all(10.0),
         child: ListTile(
-        title: Text('Choi don'),leading: Icon(Icons.play_circle),
+        title: Text('Tài Khoản',style: TextStyle(fontSize: 17),),leading: Icon(Icons.account_circle,color: Colors.black,),
         onTap: (() {
-           Navigator.of(context).popUntil((route) => route.isFirst);
-           Navigator.push(context,
-                new MaterialPageRoute(builder: (context) => new Single_play()));
+           
         }),
         ),
       ),
@@ -31,9 +33,9 @@ class Menu_button extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.all(10.0),
         child: ListTile(
-        title: Text('Cách chơi'),leading: Icon(Icons.help),
+        title: Text('Cách chơi',style: TextStyle(fontSize: 17)),leading: Icon(Icons.help,color: Colors.black),
         onTap: (() {
-           Navigator.of(context).popUntil((route) => route.isFirst);
+           Navigator.of(context).popUntil((route) => route.isCurrent);
            Navigator.push(context,
                 new MaterialPageRoute(builder: (context) => new Guide_page()));
         }),),
@@ -42,43 +44,22 @@ class Menu_button extends StatelessWidget {
        Padding(
          padding: const EdgeInsets.all(10.0),
          child: ListTile(
-      title: Text('Thông tin trò chơi'),leading: Icon(Icons.info),
+      title: Text('Thông tin trò chơi',style: TextStyle(fontSize: 17)),leading: Icon(Icons.info,color: Colors.black),
       onTap: (() {
-        Navigator.of(context).popUntil((route) => route.isFirst);
+        
            Navigator.push(context,
                 new MaterialPageRoute(builder: (context) => new Info_page()));
       }),
       ),
        ),
 
+      
+
+      
       Padding(
         padding: const EdgeInsets.all(10.0),
         child: ListTile(
-        title: Text('Đăng ký'),leading: Icon(Icons.manage_accounts),
-        onTap: (() {
-          Navigator.of(context).popUntil((route) => route.isFirst);
-           Navigator.push(context,
-                new MaterialPageRoute(builder: (context) => new Signup_page()));
-        }),
-        ),
-      ),
-
-       Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: ListTile(
-        title: Text('Đăng Nhập'),leading: Icon(Icons.manage_accounts),
-        onTap: (() {
-          Navigator.of(context).popUntil((route) => route.isFirst);
-           Navigator.push(context,
-                new MaterialPageRoute(builder: (context) => new Login_page()));
-        }),
-        ),
-      ),
-
-      Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: ListTile(
-        title: Text('Cài đặt'),leading: Icon(Icons.settings),
+        title: Text('Cài đặt',style: TextStyle(fontSize: 17)),leading: Icon(Icons.settings,color: Colors.black),
         onTap: (() {
            
         }),
@@ -88,7 +69,7 @@ class Menu_button extends StatelessWidget {
       Padding(
         padding: const EdgeInsets.all(10.0),
         child: ListTile(
-        title: Text('Thoát trò chơi'),leading: Icon(Icons.keyboard_return),
+        title: Text('Đăng xuất',style: TextStyle(fontSize: 17)),leading: Icon(Icons.logout,color: Colors.black),
         onTap: (() {
            
         }),

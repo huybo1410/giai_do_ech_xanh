@@ -15,16 +15,13 @@ class _Signup_page extends State<Signup_page> {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      appBar: AppBar(
-        
-        title: Text('Dang ky'),
-      ),
+      
       body:  Container(
         constraints: BoxConstraints.expand(),
         color: Color.fromRGBO(250, 243, 221, 1),
        child: Column(
         children: [
-          Padding(padding: EdgeInsets.all(20)),
+          Padding(padding: EdgeInsets.all(30)),
       Text('ĐĂNG KÝ',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 40),),
         Icon(Icons.person,size: 80,),
 
