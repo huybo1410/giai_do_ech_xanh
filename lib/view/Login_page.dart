@@ -12,6 +12,8 @@ class Login_page extends StatefulWidget {
 class _Login_page extends State<Login_page> {
   
 
+  bool _showpass= false;
+
   
 
   @override
@@ -20,73 +22,76 @@ class _Login_page extends State<Login_page> {
     return Scaffold(
       appBar: AppBar(
         
-        title: Text('Dang Nhap'),
+        title: Text(widget.title),
       ),
       body:  Container(
         constraints: BoxConstraints.expand(),
         color: Color.fromRGBO(250, 243,221, 1),
-       child: Column(mainAxisAlignment: MainAxisAlignment.start,
+       child: Column(
         children: [
-          
-          Row(mainAxisAlignment: MainAxisAlignment.end,children: [
-            IconButton(
-            onPressed: (){}, 
-            icon: Icon(Icons.close),
-            iconSize: 40,
-            tooltip: 'Thoát',
-            
-            )
-          ]),
-
           Padding(padding: EdgeInsets.all(10)),
       Text('ĐĂNG NHẬP',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 35),),
         Icon(Icons.person,size: 80,),
 
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
+        Container(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
             child: TextField(
               style: TextStyle(fontSize: 15),
               decoration: InputDecoration(
                 labelText: 'Tài khoản',
-                labelStyle: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),
+                border: OutlineInputBorder(borderRadius: 
+                BorderRadius.circular(10)
+                )
                 
                 ),
               
-            ),width: 350,height: 50,
-          ),
+            ),
+          ),width: 350,height: 50,
         ),
 
-         Padding(
-           padding: const EdgeInsets.all(8.0),
-           child: Container(
+         Container(
+           child:
+           Stack( alignment: AlignmentDirectional.centerEnd,
+            children: [
+            Padding(
+             padding: const EdgeInsets.all(8.0),
              child: TextField(
               style: TextStyle(fontSize: 15),
-              obscureText: true,
+              obscureText: !_showpass,
               decoration: InputDecoration(
                 labelText: 'Mật khẩu',
-                labelStyle: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),
-    
+              border: OutlineInputBorder(borderRadius: 
+               BorderRadius.circular(10)
+
+              ),
+               
                 ),
-        ),width: 350,height: 50,
-           ),
-         ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [ Text('Quên mật khẩu?',
-          style: TextStyle(
-            color: Colors.blue,
-            fontSize: 15,
-            decoration: TextDecoration.underline,
-          ),),
-          Padding(padding: EdgeInsets.all(15)
-          )],
-          ),
         ),
-        
+           ),
+          GestureDetector(
+            onTap: LessShowPass,
+            child: Padding(
+              padding: const EdgeInsets.all(14.0),
+              child: Text('Show',style: TextStyle(color: Colors.blue),),
+            ),
+          )
+           ]
+           ,),width:350 ,height: 50, 
+         ),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [ Text('Quên mật khẩu?',
+        style: TextStyle(
+          color: Colors.blue,
+          fontSize: 15,
+          decoration: TextDecoration.underline,
+        ),),
+        Padding(padding: EdgeInsets.all(13)
+        )],
+        ),
         Row(mainAxisAlignment: MainAxisAlignment.center,
           children: [
           Padding(
@@ -132,4 +137,13 @@ class _Login_page extends State<Login_page> {
     ])
     )); 
   }
+
+  void LessShowPass(){
+  setState((){
+   _showpass = !_showpass;
+  });
 }
+}
+
+
+  
