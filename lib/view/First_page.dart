@@ -26,8 +26,8 @@ class _First_page extends State<First_page> {
         children: [
 
         Padding(
-          padding: const EdgeInsets.fromLTRB(8, 50, 8, 400),
-          child: Text('Giải Đố Ếch Xanh',style: TextStyle(color: Color.fromRGBO(74, 124, 89, 1),fontSize: 30,fontWeight: FontWeight.bold),),
+          padding: const EdgeInsets.fromLTRB(8, 50, 8, 350),
+          child: Text('Giải Đố Ếch Xanh',style: TextStyle(color: Color.fromRGBO(74, 124, 89, 1),fontSize: 30,fontWeight: FontWeight.bold,fontFamily: 'MyFont'),),
         ),
 
 

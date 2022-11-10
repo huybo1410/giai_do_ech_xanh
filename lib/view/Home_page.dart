@@ -3,6 +3,7 @@ import 'package:giai_do_ech_xanh/components/menu.dart';
 import 'package:giai_do_ech_xanh/main.dart';
 import 'package:giai_do_ech_xanh/view/Single_play.dart';
 import 'package:giai_do_ech_xanh/view/pay_page.dart';
+import 'package:giai_do_ech_xanh/view/pvp_page.dart';
 
 class Home_page extends StatefulWidget {
   const Home_page({super.key});
@@ -70,7 +71,9 @@ class _Home_page extends State<Home_page> {
           shadowColor: MaterialStateProperty.all<Color>(Colors.blue.withOpacity(0.5))
         ),
         onPressed: (){
-
+          Navigator.of(context).popUntil((route) => route.isCurrent);
+           Navigator.push(context,
+                new MaterialPageRoute(builder: (context) => new pvp_page()));
         }, 
         child: Text('Đối Kháng',style: TextStyle(fontSize: 20),))
          ,),
