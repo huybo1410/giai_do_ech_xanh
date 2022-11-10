@@ -35,9 +35,49 @@ class Menu_button extends StatelessWidget {
         child: ListTile(
         title: Text('Cách chơi',style: TextStyle(fontSize: 17)),leading: Icon(Icons.help,color: Colors.black),
         onTap: (() {
-           Navigator.of(context).popUntil((route) => route.isCurrent);
-           Navigator.push(context,
-                new MaterialPageRoute(builder: (context) => new Guide_page()));
+          
+          showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Cách Chơi',style: TextStyle(color: Colors.green,fontSize: 25,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+      
+          content: const Text(
+            'CHƠI ĐƠN:\n'
+            '-Người chơi khởi đầu với màn\n'
+              'đầu tiên.\n'
+
+              '- Mỗi màn chơi với 4 câu hỏi liên\n'
+              'tiếp.\n'
+
+              '- Mỗi câu hỏi sẽ có 4 lựa chọn\n'
+
+              '- Người chơi suy nghĩ và nhanh\n'
+              'chóng chọn ra đáp án chính xác\n'
+              'nhất\n'
+              
+              '- Hoàn thành 4 câu hỏi sẽ vượt\n'
+              'qua màn chơi\n'
+
+              '- Sai bất kỳ câu hỏi nào trong\n'
+              'màn chơi hoặc hết thời gian trả\n'
+              'lời người chơi sẽ thua cuộc ngay\n'
+              'lập tức.'
+              ),
+          actions: <Widget>[
+            
+            TextButton(
+              
+              child: const Text('THOÁT'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+          
         }),),
       ),
 
@@ -46,9 +86,29 @@ class Menu_button extends StatelessWidget {
          child: ListTile(
       title: Text('Thông tin trò chơi',style: TextStyle(fontSize: 17)),leading: Icon(Icons.info,color: Colors.black),
       onTap: (() {
-        
-           Navigator.push(context,
-                new MaterialPageRoute(builder: (context) => new Info_page()));
+         
+         showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Thông tin\n trò chơi',style: TextStyle(color: Colors.green,fontSize: 25,fontWeight: FontWeight.bold),textAlign: TextAlign.center,),
+      
+          content: const Text(
+            '- Với mục đích giúp mọi người vừa có thể giải trí vừa có thẻ học hỏi thêm được kiến thức mới. Chúng em đã đưa ra phương pháp mới, lập nên một game phù hợp với mọi lứa tuổi, một trò chơi trí tuệ vui nhộn với nhưng câu hỏi đời thường nhất nhất định làm cho các bạn phải tư duy suy nghĩ. Dự án được mang tên là game "Giải đố Ếch Xanh" được lấy cảm hứng từ các gameshow nổi tiếng như Ai là Triệu Phú, Nhanh Như Chớp.... Nếu muốn vừa được giải trí vừa kiểm tra lại kiến thức vừa thách thức bản thân hoặc muốn giải trí thi đấu cùng bạn bè thì đây là một game chắc chắn sẽ mang đến cảm giác thỏa mãn cho bạn.'
+              ,style:TextStyle(),textAlign: TextAlign.justify,),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('thoát',style: TextStyle(fontSize: 15),),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            
+          ],
+        );
+      },
+    );
+
       }),
       ),
        ),
@@ -71,7 +131,7 @@ class Menu_button extends StatelessWidget {
         child: ListTile(
         title: Text('Đăng xuất',style: TextStyle(fontSize: 17)),leading: Icon(Icons.logout,color: Colors.black),
         onTap: (() {
-           
+           Navigator.of(context).popUntil((route) => route.isFirst);
         }),
         ),
       ),
