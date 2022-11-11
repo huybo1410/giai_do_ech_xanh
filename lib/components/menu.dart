@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:giai_do_ech_xanh/view/Guide_page.dart';
-import 'package:giai_do_ech_xanh/view/Info_page.dart';
+
+
 import 'package:giai_do_ech_xanh/view/Login_page.dart';
 import 'package:giai_do_ech_xanh/view/Signup_page.dart';
 import 'package:giai_do_ech_xanh/view/Single_play.dart';

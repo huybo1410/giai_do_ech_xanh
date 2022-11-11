@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:giai_do_ech_xanh/view/pvp_GamePlay.dart';
 import 'package:lottie/lottie.dart';
 class Find_page extends StatefulWidget {
   const Find_page({super.key});
@@ -42,6 +43,14 @@ class _Find_page extends State<Find_page> {
             child: Text('Hủy tìm',style: TextStyle(fontSize: 18),)),
         ),
 
+        IconButton(
+          onPressed: (){
+            Navigator.of(context).popUntil((route) => route.isCurrent);
+           Navigator.push(context,
+                new MaterialPageRoute(builder: (context) => new pvp_GamePlay()));
+          }, 
+          icon: Icon(Icons.play_arrow)),
+
 
         Padding(
           padding: const EdgeInsets.fromLTRB(8, 50, 8, 15),
@@ -60,7 +69,7 @@ class _Find_page extends State<Find_page> {
 
         
         Padding(
-          padding: const EdgeInsets.fromLTRB(8, 105, 8, 8),
+          padding: const EdgeInsets.fromLTRB(8, 60, 8, 8),
           child: Container(child: Lottie.asset('assets/frog.json',fit: BoxFit.cover),width: 300,height: 200,),
         )
 
