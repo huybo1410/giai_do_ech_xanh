@@ -35,7 +35,7 @@ class _Home_page extends State<Home_page> {
         Text('100 vàng',style: TextStyle(color: Colors.orange,fontSize: 18,fontStyle: FontStyle.italic),),
         IconButton(
           onPressed: (){
-            Navigator.of(context).popUntil((route) => route.isFirst);
+            Navigator.of(context).popUntil((route) => route.isCurrent);
            Navigator.push(context,
                 new MaterialPageRoute(builder: (context) => new Pay_page()));
           }, 
@@ -54,7 +54,7 @@ class _Home_page extends State<Home_page> {
           shadowColor: MaterialStateProperty.all<Color>(Colors.blue.withOpacity(0.5))
         ),
         onPressed: (){
-          Navigator.of(context).popUntil((route) => route.isFirst);
+          Navigator.of(context).popUntil((route) => route.isCurrent);
            Navigator.push(context,
                 new MaterialPageRoute(builder: (context) => new Single_play()));
         }, 
