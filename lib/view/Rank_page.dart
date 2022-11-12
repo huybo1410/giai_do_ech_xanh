@@ -5,13 +5,13 @@ import 'package:giai_do_ech_xanh/view/Single_play.dart';
 import 'package:giai_do_ech_xanh/view/pay_page.dart';
 import 'package:giai_do_ech_xanh/view/pvp_page.dart';
 
-class Setting_page extends StatefulWidget {
-  const Setting_page({super.key});
+class Rank_page extends StatefulWidget {
+  const Rank_page({super.key});
   @override
-  State<Setting_page> createState() =>_Setting_page();
+  State<Rank_page> createState() =>_Rank_page();
 }
 
-class _Setting_page extends State<Setting_page> {
+class _Rank_page extends State<Rank_page> {
 
  
 
@@ -21,9 +21,9 @@ class _Setting_page extends State<Setting_page> {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      drawer: Menu_button(),
+      
       appBar: AppBar(
-        title: Text('Trang chủ'),
+        
       ),
       //drawer: Menu_button(),
       body: 

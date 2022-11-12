@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 
 import 'package:giai_do_ech_xanh/view/Login_page.dart';
+import 'package:giai_do_ech_xanh/view/Setting_page.dart';
 import 'package:giai_do_ech_xanh/view/Signup_page.dart';
 import 'package:giai_do_ech_xanh/view/Single_play.dart';
 
@@ -123,7 +124,9 @@ class Menu_button extends StatelessWidget {
         child: ListTile(
         title: Text('Cài đặt',style: TextStyle(fontSize: 17)),leading: Icon(Icons.settings,color: Colors.black),
         onTap: (() {
-           
+           Navigator.of(context).pop();
+           Navigator.push(context,
+                new MaterialPageRoute(builder: (context) => new Setting_page()));
         }),
         ),
       ),

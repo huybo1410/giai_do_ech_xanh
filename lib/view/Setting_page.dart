@@ -48,9 +48,9 @@ final MaterialStateProperty<Color?> trackColor =
   Widget build(BuildContext context) {
     
     return Scaffold(
-      drawer: Menu_button(),
+      
       appBar: AppBar(
-        title: Text('Trang chủ'),
+        
       ),
       //drawer: Menu_button(),
       body: 
