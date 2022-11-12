@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-=======
+
 import 'package:giai_do_ech_xanh/components/menu.dart';
 import 'package:giai_do_ech_xanh/main.dart';
 import 'package:giai_do_ech_xanh/view/Single_play.dart';
@@ -118,4 +117,4 @@ Padding(
       ); 
   }
 }
->>>>>>> 64f5eee853bd2fb4ce4f5cb5433149ca79fd79e9
+
