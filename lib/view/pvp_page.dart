@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:giai_do_ech_xanh/view/FindGame.dart';
+import 'package:giai_do_ech_xanh/view/Rank_page.dart';
 import 'package:giai_do_ech_xanh/view/pay_page.dart';
 import 'package:giai_do_ech_xanh/view/pvp_GamePlay.dart';
 class pvp_page extends StatefulWidget {
@@ -60,7 +61,8 @@ class _pvp_page extends State<pvp_page> {
           shadowColor: MaterialStateProperty.all<Color>(Colors.blue.withOpacity(0.5))
         ),
         onPressed: (){
-          
+           Navigator.push(context,
+                new MaterialPageRoute(builder: (context) => new Rank_page()));
         }, 
         child: Text('Bảng xếp hạng',style: TextStyle(fontSize: 20),))
          ,),

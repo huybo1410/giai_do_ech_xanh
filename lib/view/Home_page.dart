@@ -79,7 +79,49 @@ class _Home_page extends State<Home_page> {
          ,),
 
          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
-         Padding(padding: EdgeInsets.all(7),child:  Icon(Icons.calendar_month,size: 35,),),
+        IconButton(onPressed: () {
+          showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: 
+             Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text('Hãy nhận ngay:',style: TextStyle(color: Colors.red,fontSize: 20),),
+
+              IconButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                }, icon: Icon(Icons.close,),
+                )
+        
+              ],
+            ),
+          
+          content: const Text('00:00:00',style:TextStyle(fontSize: 30) ,textAlign: TextAlign.center,),
+              backgroundColor: Color.fromRGBO(250, 243,221, 1),
+          actions: <Widget>[
+           
+            Row(mainAxisAlignment: MainAxisAlignment.center,
+              children: 
+              [
+                ElevatedButton(
+                  style: TextButton.styleFrom(
+                    textStyle: Theme.of(context).textTheme.labelLarge,
+                    backgroundColor: Colors.red,
+                  ),
+                  child: const Text('1 lượt mua đáp án',style: TextStyle(fontSize: 15),),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ],
+            ),
+          ],
+        );
+      },
+    );
+        }, icon: Icon(Icons.calculate)),
          Padding(padding: EdgeInsets.all(7),child:  Icon(Icons.settings,size: 35,),)
          ],)
 
