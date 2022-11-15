@@ -93,12 +93,20 @@ class _Login_page extends State<Login_page> {
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [ Text('Quên mật khẩu?',
+          children: [ 
+
+            TextButton(
+              onPressed: () {
+                
+              }, 
+              child: Text('Quên mật khẩu?',
         style: TextStyle(
           color: Colors.blue,
           fontSize: 15,
           decoration: TextDecoration.underline,
         ),),
+        ),
+
         Padding(padding: EdgeInsets.all(13)
         )],
         ),
