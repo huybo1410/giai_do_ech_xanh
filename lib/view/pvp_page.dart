@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:giai_do_ech_xanh/components/menu.dart';
 import 'package:giai_do_ech_xanh/view/FindGame.dart';
 import 'package:giai_do_ech_xanh/view/Rank_page.dart';
 import 'package:giai_do_ech_xanh/view/pay_page.dart';
@@ -20,14 +21,20 @@ class _pvp_page extends State<pvp_page> {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      appBar: AppBar(title: Text('PvP'),),
+      drawer: Menu_button(),
       
       body: Container(
       decoration: BoxDecoration(color: Color.fromRGBO(200, 213, 185,1))
       ,child: 
        Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
       Row(mainAxisAlignment: MainAxisAlignment.start,children: [
-        // Icon(Icons.menu,size: 35,),
+         Builder(builder: (context) => Container(
+        child:  TextButton(
+          onPressed: (){
+            Scaffold.of(context).openDrawer();
+          }, 
+          child: Icon(Icons.menu,size: 45,)),)),
+
         Expanded(child:Text('')),
         Text('Số trận win:   ',style: TextStyle(color: Colors.red,fontSize: 18,fontStyle: FontStyle.italic),),
         

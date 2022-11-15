@@ -21,16 +21,22 @@ class _Home_page extends State<Home_page> {
     
     return Scaffold(
       drawer: Menu_button(),
-      appBar: AppBar(
-        title: Text('Trang chủ'),
-      ),
+      // appBar: AppBar(
+      //   title: Text('Trang chủ'),
+      // ),
       //drawer: Menu_button(),
       body:  Container(
       decoration: BoxDecoration(color: Color.fromRGBO(200, 213, 185,1))
       ,child: 
        Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
       Row(mainAxisAlignment: MainAxisAlignment.start,children: [
-        // Icon(Icons.menu,size: 35,),
+      Builder(builder: (context) => Container(
+        child:  TextButton(
+          onPressed: (){
+            Scaffold.of(context).openDrawer();
+          }, 
+          child: Icon(Icons.menu,size: 45,)),)),
+
         Expanded(child:Text('')),
         Text('100 vàng',style: TextStyle(color: Colors.orange,fontSize: 18,fontStyle: FontStyle.italic),),
         IconButton(

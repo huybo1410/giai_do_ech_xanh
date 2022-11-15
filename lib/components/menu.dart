@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:giai_do_ech_xanh/view/Home_page.dart';
 
 
 import 'package:giai_do_ech_xanh/view/Login_page.dart';
@@ -29,8 +30,20 @@ class Menu_button extends StatelessWidget {
         }),
         ),
       ),
-      
 
+      Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: ListTile(
+        title: Text('Trang chính',style: TextStyle(fontSize: 17),),leading: Icon(Icons.home,color: Colors.black,),
+        onTap: (() {
+           Navigator.of(context).pop();
+           Navigator.push(context,
+                 MaterialPageRoute(builder: (context) => new Home_page()));
+        }),
+        ),
+      ),
+
+      
       
       Padding(
         padding: const EdgeInsets.all(10.0),
@@ -126,7 +139,7 @@ class Menu_button extends StatelessWidget {
         onTap: (() {
            Navigator.of(context).pop();
            Navigator.push(context,
-                new MaterialPageRoute(builder: (context) => new Setting_page()));
+                 MaterialPageRoute(builder: (context) => new Setting_page()));
         }),
         ),
       ),

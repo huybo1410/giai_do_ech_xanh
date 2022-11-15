@@ -93,7 +93,7 @@ Padding(
              Row(
                children: [
                  Expanded(child:Text('TOP 4:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
-                 Expanded(child:Text('NINH' ,style: TextStyle(fontSize: 20),) ,),
+                 Expanded(child:Text('Người lạ' ,style: TextStyle(fontSize: 20),) ,),
                  Expanded(child:Text('777 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
@@ -109,7 +109,7 @@ Padding(
              Row(
                children: [
                  Expanded(child:Text('TOP 5:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
-                 Expanded(child:Text('HIÊN' ,style: TextStyle(fontSize: 20),) ,),
+                 Expanded(child:Text('Người lạ' ,style: TextStyle(fontSize: 20),) ,),
                  Expanded(child:Text('666 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
@@ -125,7 +125,7 @@ Padding(
              Row(
                children: [
                  Expanded(child:Text('TOP 6:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
-                 Expanded(child:Text('NHÃ' ,style: TextStyle(fontSize: 20),) ,),
+                 Expanded(child:Text('Người lạ' ,style: TextStyle(fontSize: 20),) ,),
                  Expanded(child:Text('555 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
@@ -141,7 +141,7 @@ Padding(
              Row(
                children: [
                  Expanded(child:Text('TOP 7:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
-                 Expanded(child:Text('TRUNG' ,style: TextStyle(fontSize: 20),) ,),
+                 Expanded(child:Text('Người lạ' ,style: TextStyle(fontSize: 20),) ,),
                  Expanded(child:Text('444 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
@@ -157,7 +157,7 @@ Padding(
              Row(
                children: [
                  Expanded(child:Text('TOP 8:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
-                 Expanded(child:Text('YASUO' ,style: TextStyle(fontSize: 20),) ,),
+                 Expanded(child:Text('Người lạ' ,style: TextStyle(fontSize: 20),) ,),
                  Expanded(child:Text('333 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
@@ -173,7 +173,7 @@ Padding(
              Row(
                children: [
                  Expanded(child:Text('TOP 9:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
-                 Expanded(child:Text('LEE SIN' ,style: TextStyle(fontSize: 20),) ,),
+                 Expanded(child:Text('Người lạ' ,style: TextStyle(fontSize: 20),) ,),
                  Expanded(child:Text('222 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
@@ -189,7 +189,7 @@ Padding(
              Row(
                children: [
                  Expanded(child:Text('TOP 10:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
-                 Expanded(child:Text('YONE' ,style: TextStyle(fontSize: 20),) ,),
+                 Expanded(child:Text('Người lạ' ,style: TextStyle(fontSize: 20),) ,),
                  Expanded(child:Text('111 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
