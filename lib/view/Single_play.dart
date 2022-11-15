@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:giai_do_ech_xanh/components/menu.dart';
 import 'package:giai_do_ech_xanh/view/GamePlay.dart';
+import 'package:giai_do_ech_xanh/view/pay_page.dart';
 
 class Single_play extends StatefulWidget {
   const Single_play({super.key});
@@ -17,13 +18,30 @@ class _Single_play extends State<Single_play> {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Chơi đơn'),
-      ),
+      drawer: Menu_button(),
       body: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+
+            Row(mainAxisAlignment: MainAxisAlignment.start,children: [
+      Builder(builder: (context) => Container(
+        child:  TextButton(
+          onPressed: (){
+            Scaffold.of(context).openDrawer();
+          }, 
+          child: Icon(Icons.menu,size: 45,)),)),
+
+        Expanded(child:Text('')),
+        Text('100 vàng',style: TextStyle(color: Colors.orange,fontSize: 18,fontStyle: FontStyle.italic),),
+        IconButton(
+          onPressed: (){
+            Navigator.of(context).popUntil((route) => route.isCurrent);
+           Navigator.push(context,
+                new MaterialPageRoute(builder: (context) => new Pay_page()));
+          }, 
+          icon: Icon(Icons.add,color: Colors.orange,))
+      ],),
             // Dong tieu de
             Padding(
               padding: const EdgeInsets.all(8.0),
