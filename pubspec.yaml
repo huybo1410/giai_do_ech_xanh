@@ -68,6 +68,13 @@ flutter:
     - assets/First.jpg
     - assets/pvp.png
     - assets/frog.json
+    - assets/Nen_man.jpg
+    - assets/leaf1.png
+    - assets/leaf2.png
+    - assets/leaf3.png
+    - assets/fish1.png
+    - assets/fish2.png
+    - assets/fish3.png
   
   fonts:
     - family: MyFont     

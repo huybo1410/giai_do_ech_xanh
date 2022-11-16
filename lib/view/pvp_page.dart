@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:giai_do_ech_xanh/components/menu.dart';
+import 'package:giai_do_ech_xanh/view/Create_room.dart';
 import 'package:giai_do_ech_xanh/view/FindGame.dart';
 import 'package:giai_do_ech_xanh/view/Rank_page.dart';
 import 'package:giai_do_ech_xanh/view/pay_page.dart';
@@ -85,7 +86,7 @@ class _pvp_page extends State<pvp_page> {
         ),
         onPressed: (){
           Navigator.push(context,
-                new MaterialPageRoute(builder: (context) => new pvp_GamePlay()));
+                new MaterialPageRoute(builder: (context) => new Create_room()));
         }, 
         child: Text('Tạo Phòng',style: TextStyle(fontSize: 20),))
       ,),

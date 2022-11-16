@@ -35,7 +35,7 @@ class _Home_page extends State<Home_page> {
           onPressed: (){
             Scaffold.of(context).openDrawer();
           }, 
-          child: Icon(Icons.menu,size: 45,)),)),
+          child: Icon(Icons.menu,size: 45,color: Colors.black,)),)),
 
         Expanded(child:Text('')),
         Text('100 vàng',style: TextStyle(color: Colors.orange,fontSize: 18,fontStyle: FontStyle.italic),),
