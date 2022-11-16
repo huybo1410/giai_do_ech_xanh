@@ -22,15 +22,25 @@ class _Rank_page extends State<Rank_page> {
     
     return Scaffold(
       
-      appBar: AppBar(
-        
-      ),
-      //drawer: Menu_button(),
       body: 
      Container(
         color: Color.fromRGBO(250, 243,221, 1),
         child: ListView(
           children: [
+           Row(
+            mainAxisAlignment: MainAxisAlignment.end ,
+            children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: IconButton(
+              onPressed: (){
+                Navigator.of(context).pop();
+              }, 
+              icon: Icon(Icons.close,size: 45,)
+              ),
+            ),
+            ],),
+
            Padding(
              padding: const EdgeInsets.all(8.0),
              child: Container(
@@ -47,7 +57,7 @@ class _Rank_page extends State<Rank_page> {
                children: [
                  Expanded(child:Text('TOP 1:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
                  Expanded(child:Text('LỘC' ,style: TextStyle(fontSize: 20),) ,),
-                 Expanded(child:Text('1000 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
+                 Expanded(child:Text('1000 Trận thắng' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
              height: 50,
@@ -55,14 +65,14 @@ class _Rank_page extends State<Rank_page> {
              color: Colors.amberAccent,
              ),
            ),
-Padding(
+           Padding(
              padding: const EdgeInsets.all(8.0),
              child: Container(child:
              Row(
                children: [
                  Expanded(child:Text('TOP 2:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
                  Expanded(child:Text('HUY' ,style: TextStyle(fontSize: 20),) ,),
-                 Expanded(child:Text('999 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
+                 Expanded(child:Text('999 Trận thắng' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
              height: 50,
@@ -78,7 +88,7 @@ Padding(
                children: [
                  Expanded(child:Text('TOP 3:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
                  Expanded(child:Text('NHÂN' ,style: TextStyle(fontSize: 20),) ,),
-                 Expanded(child:Text('888 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
+                 Expanded(child:Text('888 Trận thắng' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
              height: 50,
@@ -94,7 +104,7 @@ Padding(
                children: [
                  Expanded(child:Text('TOP 4:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
                  Expanded(child:Text('Người lạ' ,style: TextStyle(fontSize: 20),) ,),
-                 Expanded(child:Text('777 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
+                 Expanded(child:Text('777 Trận thắng' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
              height: 50,
@@ -110,7 +120,7 @@ Padding(
                children: [
                  Expanded(child:Text('TOP 5:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
                  Expanded(child:Text('Người lạ' ,style: TextStyle(fontSize: 20),) ,),
-                 Expanded(child:Text('666 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
+                 Expanded(child:Text('666 Trận thắng' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
              height: 50,
@@ -126,7 +136,7 @@ Padding(
                children: [
                  Expanded(child:Text('TOP 6:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
                  Expanded(child:Text('Người lạ' ,style: TextStyle(fontSize: 20),) ,),
-                 Expanded(child:Text('555 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
+                 Expanded(child:Text('555 Trận thắng' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
              height: 50,
@@ -142,7 +152,7 @@ Padding(
                children: [
                  Expanded(child:Text('TOP 7:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
                  Expanded(child:Text('Người lạ' ,style: TextStyle(fontSize: 20),) ,),
-                 Expanded(child:Text('444 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
+                 Expanded(child:Text('444 Trận thắng' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
              height: 50,
@@ -158,7 +168,7 @@ Padding(
                children: [
                  Expanded(child:Text('TOP 8:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
                  Expanded(child:Text('Người lạ' ,style: TextStyle(fontSize: 20),) ,),
-                 Expanded(child:Text('333 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
+                 Expanded(child:Text('333 Trận thắng' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
              height: 50,
@@ -174,7 +184,7 @@ Padding(
                children: [
                  Expanded(child:Text('TOP 9:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
                  Expanded(child:Text('Người lạ' ,style: TextStyle(fontSize: 20),) ,),
-                 Expanded(child:Text('222 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
+                 Expanded(child:Text('222 Trận thắng' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
              height: 50,
@@ -190,7 +200,7 @@ Padding(
                children: [
                  Expanded(child:Text('TOP 10:' ,style: TextStyle(color: Colors.green,fontSize: 20,fontWeight: FontWeight.bold),),flex: 1, ),
                  Expanded(child:Text('Người lạ' ,style: TextStyle(fontSize: 20),) ,),
-                 Expanded(child:Text('111 point' ,style: TextStyle(fontSize: 20),),flex: 1, ),
+                 Expanded(child:Text('111 Trận thắng' ,style: TextStyle(fontSize: 20),),flex: 1, ),
                ],
              ),
              height: 50,

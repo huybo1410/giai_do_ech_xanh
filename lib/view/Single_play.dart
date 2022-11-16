@@ -30,17 +30,9 @@ class _Single_play extends State<Single_play> {
           onPressed: (){
             Scaffold.of(context).openDrawer();
           }, 
-          child: Icon(Icons.menu,size: 45,)),)),
+          child: Icon(Icons.menu,size: 45,color: Colors.black,)),)),
 
-        Expanded(child:Text('')),
-        Text('100 vàng',style: TextStyle(color: Colors.orange,fontSize: 18,fontStyle: FontStyle.italic),),
-        IconButton(
-          onPressed: (){
-            Navigator.of(context).popUntil((route) => route.isCurrent);
-           Navigator.push(context,
-                new MaterialPageRoute(builder: (context) => new Pay_page()));
-          }, 
-          icon: Icon(Icons.add,color: Colors.orange,))
+        
       ],),
             // Dong tieu de
             Padding(
@@ -54,132 +46,152 @@ class _Single_play extends State<Single_play> {
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 8, 30, 8),
-              child: ElevatedButton(
+              child: TextButton(
               style: ButtonStyle(
-                minimumSize: MaterialStatePropertyAll<Size>(Size(90,90)),
-                backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
-                side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
-                shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
+                // minimumSize: MaterialStatePropertyAll<Size>(Size(90,90)),
+                //backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
+                //side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
+                //shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
               ),
               onPressed: (){
-                 //Navigator.of(context).popUntil((route) => route.isFirst);
+                 Navigator.of(context).pop();
            Navigator.push(context,
                 new MaterialPageRoute(builder: (context) => new GamePlay()));
               }, 
-              child: Text('1',style: TextStyle(fontSize: 20,color: Colors.black),)
+              child: Container(child:
+              Image(image: AssetImage('assets/leaf1.png'),fit: BoxFit.cover,)
+               ,width:90 ,height: 90,)
               ),
             ),
 
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Icon(Icons.arrow_forward,size: 40,),
+              child: Container(child: 
+              Image(image: AssetImage('assets/fish1.png'),fit: BoxFit.cover,)
+              ,width:60 ,height:60 ,)
             ),
 
              Padding(
                padding: const EdgeInsets.fromLTRB(30, 8, 8, 8),
-               child: ElevatedButton(
+               child: TextButton(
             style: ButtonStyle(
-                minimumSize: MaterialStatePropertyAll<Size>(Size(90,90)),
-                backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
-                side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
-                shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
+                
+                //backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
+                //side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
+                //shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
             ),
             onPressed: (){}, 
-            child: Text('2',style: TextStyle(fontSize: 20,color: Colors.black),)
+            child: Container(child:
+              Image(image: AssetImage('assets/leaf2.png'),fit: BoxFit.cover,)
+               ,width:90 ,height: 90,)
             ),
              ),
           ],),
 
           //Mui ten xuong
           Padding(
-            padding: const EdgeInsets.fromLTRB(190, 8, 0, 8),
-            child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-              Icon(Icons.arrow_downward,size: 40,)
-            ],),
+            padding: const EdgeInsets.fromLTRB(220, 8, 0, 8),
+            child: Container(child: 
+              Image(image: AssetImage('assets/fish2.png'),fit: BoxFit.cover,)
+              ,width:60 ,height:60 ,)
           ),
 
           // Hang man 3,4
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 8, 30, 8),
-              child: ElevatedButton(
+              child: TextButton(
               style: ButtonStyle(
-                minimumSize: MaterialStatePropertyAll<Size>(Size(90,90)),
-                backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
-                side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
-                shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
+                // minimumSize: MaterialStatePropertyAll<Size>(Size(90,90)),
+                // backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
+                // side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
+                // shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
               ),
               onPressed: (){}, 
-              child: Text('4',style: TextStyle(fontSize: 20,color: Colors.black),)
+              child: Container(child:
+              Image(image: AssetImage('assets/leaf2.png'),fit: BoxFit.cover,)
+               ,width:90 ,height: 90,)
               ),
             ),
 
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Icon(Icons.arrow_back,size: 40,),
+              child: Container(child: 
+              Image(image: AssetImage('assets/fish3.png'),fit: BoxFit.cover,)
+              ,width:60 ,height:60 ,)
             ),
 
              Padding(
                padding: const EdgeInsets.fromLTRB(30, 8, 8, 8),
-               child: ElevatedButton(
+               child: TextButton(
             style: ButtonStyle(
-                minimumSize: MaterialStatePropertyAll<Size>(Size(90,90)),
-                backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
-                side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
-                shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
+                // minimumSize: MaterialStatePropertyAll<Size>(Size(90,90)),
+                // backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
+                // side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
+                // shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
             ),
             onPressed: (){}, 
-            child: Text('3',style: TextStyle(fontSize: 20,color: Colors.black),)
+            child: Container(child:
+              Image(image: AssetImage('assets/leaf1.png'),fit: BoxFit.cover,)
+               ,width:90 ,height: 90,)
             ),
              ),
           ],),
 
            //Mui ten xuong
           Padding(
-            padding: const EdgeInsets.fromLTRB(0, 8, 190, 8),
-            child: Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-              Icon(Icons.arrow_downward,size: 40,)
-            ],),
+            padding: const EdgeInsets.fromLTRB(0, 8, 220, 8),
+            child: Container(child: 
+              Image(image: AssetImage('assets/fish2.png'),fit: BoxFit.cover,)
+              ,width:60 ,height:60 ,)
           ),
 
           // Hang man 5,6
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 8, 30, 8),
-              child: ElevatedButton(
+              child: TextButton(
               style: ButtonStyle(
-                minimumSize: MaterialStatePropertyAll<Size>(Size(90,90)),
-                backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
-                side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
-                shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
+                // minimumSize: MaterialStatePropertyAll<Size>(Size(90,90)),
+                // backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
+                // side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
+                // shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
               ),
               onPressed: (){}, 
-              child: Text('5',style: TextStyle(fontSize: 20,color: Colors.black),)
+              child: Container(child:
+              Image(image: AssetImage('assets/leaf1.png'),fit: BoxFit.cover,)
+               ,width:90 ,height: 90,)
               ),
             ),
 
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Icon(Icons.arrow_forward,size: 40,),
+              child: Container(child: 
+              Image(image: AssetImage('assets/fish1.png'),fit: BoxFit.cover,)
+              ,width:60 ,height:60 ,)
             ),
 
              Padding(
                padding: const EdgeInsets.fromLTRB(30, 8, 8, 8),
-               child: ElevatedButton(
+               child: TextButton(
             style: ButtonStyle(
-                minimumSize: MaterialStatePropertyAll<Size>(Size(90,90)),
-                backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
-                side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
-                shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
+                // minimumSize: MaterialStatePropertyAll<Size>(Size(90,90)),
+                // backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
+                // side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
+                // shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
             ),
             onPressed: (){}, 
-            child: Text('6',style: TextStyle(fontSize: 20,color: Colors.black),)
+            child: Container(child:
+              Image(image: AssetImage('assets/leaf3.png'),fit: BoxFit.cover,)
+               ,width:90 ,height: 90,)
             ),
              ),
           ],),
 
           ],
-        ),decoration: BoxDecoration(color: Color.fromRGBO(200, 213, 185,1)),
+        ),decoration: BoxDecoration(
+        image: DecorationImage(image: AssetImage('assets/Nen_man.jpg'),fit: BoxFit.cover)
+        ),
         ),
     );
   }
