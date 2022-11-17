@@ -91,6 +91,22 @@ class _Create_Room extends State<Create_Room> {
                 ),
               ),
             ),
+            Padding(
+              padding: EdgeInsets.all(8),
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                      minimumSize:
+                          MaterialStatePropertyAll<Size>(Size(100, 50)),
+                      backgroundColor: MaterialStatePropertyAll<Color>(
+                          Color.fromRGBO(104, 176, 171, 1))),
+                  onPressed: (() {}),
+                  child: Text(
+                    'Tạo Phòng',
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  )),
+            ),
           ],
         ),
       ),
