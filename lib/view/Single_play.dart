@@ -46,22 +46,20 @@ class _Single_play extends State<Single_play> {
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 8, 30, 8),
-              child: TextButton(
-              style: ButtonStyle(
-                // minimumSize: MaterialStatePropertyAll<Size>(Size(90,90)),
-                //backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
-                //side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
-                //shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
-              ),
-              onPressed: (){
-                 Navigator.of(context).pop();
-           Navigator.push(context,
-                new MaterialPageRoute(builder: (context) => new GamePlay()));
-              }, 
-              child: Container(child:
-              Image(image: AssetImage('assets/leaf1.png'),fit: BoxFit.cover,)
-               ,width:90 ,height: 90,)
-              ),
+              child: Container(
+                width: 90,
+                height: 90,
+                decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/leaf1.png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                child: TextButton(onPressed: () {
+                  
+                },
+                child: Text('1',style: TextStyle(fontSize: 30,color: Colors.black),),),
+              )
             ),
 
             Padding(
@@ -73,18 +71,20 @@ class _Single_play extends State<Single_play> {
 
              Padding(
                padding: const EdgeInsets.fromLTRB(30, 8, 8, 8),
-               child: TextButton(
-            style: ButtonStyle(
-                
-                //backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
-                //side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
-                //shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
-            ),
-            onPressed: (){}, 
-            child: Container(child:
-              Image(image: AssetImage('assets/leaf2.png'),fit: BoxFit.cover,)
-               ,width:90 ,height: 90,)
-            ),
+               child: Container(
+                width: 90,
+                height: 90,
+                decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/leaf2.png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                child: TextButton(onPressed: () {
+                  
+                },
+                child: Text('2',style: TextStyle(fontSize: 30,color: Colors.black),),),
+              )
              ),
           ],),
 
@@ -100,18 +100,20 @@ class _Single_play extends State<Single_play> {
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 8, 30, 8),
-              child: TextButton(
-              style: ButtonStyle(
-                // minimumSize: MaterialStatePropertyAll<Size>(Size(90,90)),
-                // backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
-                // side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
-                // shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
-              ),
-              onPressed: (){}, 
-              child: Container(child:
-              Image(image: AssetImage('assets/leaf2.png'),fit: BoxFit.cover,)
-               ,width:90 ,height: 90,)
-              ),
+              child: Container(
+                width: 90,
+                height: 90,
+                decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/leaf1.png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                child: TextButton(onPressed: () {
+                  
+                },
+                child: Text('4',style: TextStyle(fontSize: 30,color: Colors.black),),),
+              )
             ),
 
             Padding(
@@ -123,18 +125,20 @@ class _Single_play extends State<Single_play> {
 
              Padding(
                padding: const EdgeInsets.fromLTRB(30, 8, 8, 8),
-               child: TextButton(
-            style: ButtonStyle(
-                // minimumSize: MaterialStatePropertyAll<Size>(Size(90,90)),
-                // backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
-                // side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
-                // shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
-            ),
-            onPressed: (){}, 
-            child: Container(child:
-              Image(image: AssetImage('assets/leaf1.png'),fit: BoxFit.cover,)
-               ,width:90 ,height: 90,)
-            ),
+               child: Container(
+                width: 90,
+                height: 90,
+                decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/leaf3.png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                child: TextButton(onPressed: () {
+                  
+                },
+                child: Text('3',style: TextStyle(fontSize: 30,color: Colors.black),),),
+              )
              ),
           ],),
 
@@ -150,18 +154,20 @@ class _Single_play extends State<Single_play> {
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(8, 8, 30, 8),
-              child: TextButton(
-              style: ButtonStyle(
-                // minimumSize: MaterialStatePropertyAll<Size>(Size(90,90)),
-                // backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
-                // side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
-                // shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
-              ),
-              onPressed: (){}, 
-              child: Container(child:
-              Image(image: AssetImage('assets/leaf1.png'),fit: BoxFit.cover,)
-               ,width:90 ,height: 90,)
-              ),
+              child: Container(
+                width: 90,
+                height: 90,
+                decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/leaf2.png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                child: TextButton(onPressed: () {
+                  
+                },
+                child: Text('5',style: TextStyle(fontSize: 30,color: Colors.black),),),
+              )
             ),
 
             Padding(
@@ -173,18 +179,20 @@ class _Single_play extends State<Single_play> {
 
              Padding(
                padding: const EdgeInsets.fromLTRB(30, 8, 8, 8),
-               child: TextButton(
-            style: ButtonStyle(
-                // minimumSize: MaterialStatePropertyAll<Size>(Size(90,90)),
-                // backgroundColor: MaterialStatePropertyAll<Color>(Color.fromRGBO(143, 192, 169, 1)),
-                // side: MaterialStatePropertyAll<BorderSide>(BorderSide(style: BorderStyle.solid)),
-                // shadowColor: MaterialStateProperty.all<Color>(Colors.green.withOpacity(0.8))
-            ),
-            onPressed: (){}, 
-            child: Container(child:
-              Image(image: AssetImage('assets/leaf3.png'),fit: BoxFit.cover,)
-               ,width:90 ,height: 90,)
-            ),
+               child: Container(
+                width: 90,
+                height: 90,
+                decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/leaf3.png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                child: TextButton(onPressed: () {
+                  
+                },
+                child: Text('6',style: TextStyle(fontSize: 30,color: Colors.black),),),
+              )
              ),
           ],),
 

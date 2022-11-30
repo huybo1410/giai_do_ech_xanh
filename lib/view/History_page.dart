@@ -17,7 +17,7 @@ class _History extends State<History> {
     return Scaffold(
       appBar: AppBar(),
       body: 
-      
+      Container()
     );
   }
 }

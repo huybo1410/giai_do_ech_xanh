@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:giai_do_ech_xanh/view/Email_page.dart';
 import 'package:giai_do_ech_xanh/view/Home_page.dart';
 import 'package:giai_do_ech_xanh/view/Signup_page.dart';
 class Login_page extends StatefulWidget {
@@ -97,7 +98,9 @@ class _Login_page extends State<Login_page> {
 
             TextButton(
               onPressed: () {
-                
+                 Navigator.of(context).pop();
+           Navigator.push(context,
+                 MaterialPageRoute(builder: (context) => new Email_page()));
               }, 
               child: Text('Quên mật khẩu?',
         style: TextStyle(

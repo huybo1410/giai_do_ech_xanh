@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:giai_do_ech_xanh/view/Account_page.dart';
 
 import 'package:giai_do_ech_xanh/view/Home_page.dart';
 
 
 import 'package:giai_do_ech_xanh/view/Login_page.dart';
+import 'package:giai_do_ech_xanh/view/Report_page.dart';
 import 'package:giai_do_ech_xanh/view/Setting_page.dart';
 import 'package:giai_do_ech_xanh/view/Signup_page.dart';
 import 'package:giai_do_ech_xanh/view/Single_play.dart';
@@ -18,7 +20,7 @@ class Menu_button extends StatelessWidget {
     Container(child: 
     ListView(children: [
       DrawerHeader(
-        child: Image(image: AssetImage('assets/menu1.jpg'),fit: BoxFit.cover,),
+        child: Image(image: AssetImage('assets/menu_final.jpg'),fit: BoxFit.cover,),
         decoration: BoxDecoration(color: Colors.white),
         ),
       
@@ -28,8 +30,8 @@ class Menu_button extends StatelessWidget {
         title: Text('Tài Khoản',style: TextStyle(fontSize: 17),),leading: Icon(Icons.account_circle,color: Colors.black,),
         onTap: (() {
            Navigator.of(context).pop();
-          //  Navigator.push(context,
-          //        MaterialPageRoute(builder: (context) => new ChoiDon()));
+           Navigator.push(context,
+                 MaterialPageRoute(builder: (context) => new Account_page()));
         }),
         ),
       ),
@@ -143,6 +145,18 @@ class Menu_button extends StatelessWidget {
            Navigator.of(context).pop();
            Navigator.push(context,
                  MaterialPageRoute(builder: (context) => new Setting_page()));
+        }),
+        ),
+      ),
+
+       Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: ListTile(
+        title: Text('Báo cáo lỗi',style: TextStyle(fontSize: 17),),leading: Icon(Icons.report,color: Colors.black,),
+        onTap: (() {
+           Navigator.of(context).pop();
+           Navigator.push(context,
+                 MaterialPageRoute(builder: (context) => new Report_page()));
         }),
         ),
       ),

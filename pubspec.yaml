@@ -64,7 +64,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/LogoDoAn.png
-    - assets/menu1.jpg
+    - assets/menu_final.jpg
     - assets/First.jpg
     - assets/pvp.png
     - assets/frog.json
@@ -75,6 +75,9 @@ flutter:
     - assets/fish1.png
     - assets/fish2.png
     - assets/fish3.png
+    - assets/btn2.png
+    - assets/background.jpg
+    - assets/setting1.png
   
   fonts:
     - family: MyFont     
