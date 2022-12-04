@@ -50,7 +50,7 @@ class _Report_page extends State<Report_page> {
          Row(
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(5, 0, 27, 270),
+              padding: const EdgeInsets.fromLTRB(5, 0, 27, 50),
               child: Text('Chi tiết lỗi:',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),textAlign: TextAlign.start,),
             ),
             Padding(

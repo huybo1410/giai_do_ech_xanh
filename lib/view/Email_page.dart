@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:giai_do_ech_xanh/view/Home_page.dart';
+import 'package:giai_do_ech_xanh/view/Password_page.dart';
 import 'package:giai_do_ech_xanh/view/Signup_page.dart';
 class Email_page extends StatefulWidget {
   const Email_page({super.key});
@@ -24,6 +25,17 @@ class _Email_page extends State<Email_page> {
         color: Color.fromRGBO(250, 243,221, 1),
           child:Column(mainAxisAlignment: MainAxisAlignment.start,
             children: [
+
+              Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 15, 8),
+              child: IconButton(onPressed: (){
+                Navigator.of(context).pop();
+              }, icon: Icon(Icons.close,size: 40,)),
+            ),
+          ],),
               SizedBox(
                 height: 20,
               ),
@@ -96,7 +108,9 @@ class _Email_page extends State<Email_page> {
                 )
               )
             ),
-            onPressed: () => {},
+            onPressed: () => {
+              Navigator.push(context,new MaterialPageRoute(builder: (context) => new Password_page()))
+            },
             child: Text("Tiếp theo",style: TextStyle(
               fontSize: 17
             ), ),

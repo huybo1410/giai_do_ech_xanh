@@ -18,14 +18,22 @@ bool _showpass= false;
   Widget build(BuildContext context) {
     return Scaffold(
         
-        appBar: AppBar(
-          title: Text('Test Code'),
-        ),
+        
         body: Container(
           constraints:  BoxConstraints.expand(),
         color: Color.fromRGBO(250, 243,221, 1),
           child:Column(mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 15, 8),
+              child: IconButton(onPressed: (){
+                Navigator.of(context).pop();
+              }, icon: Icon(Icons.close,size: 40,)),
+            ),
+          ],),
               SizedBox(
                 height: 20,
               ),

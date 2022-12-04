@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:giai_do_ech_xanh/components/menu.dart';
 import 'package:giai_do_ech_xanh/main.dart';
+import 'package:giai_do_ech_xanh/view/Setting_page.dart';
 import 'package:giai_do_ech_xanh/view/Single_play.dart';
 import 'package:giai_do_ech_xanh/view/pay_page.dart';
 import 'package:giai_do_ech_xanh/view/pvp_page.dart';
@@ -26,9 +27,13 @@ class _Home_page extends State<Home_page> {
       // ),
       //drawer: Menu_button(),
       body:  Container(
-      decoration: BoxDecoration(color: Color.fromRGBO(200, 213, 185,1))
-      ,child: 
-       Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
+      decoration: BoxDecoration(
+        image: DecorationImage(image: AssetImage('assets/background.jpg'),fit: BoxFit.cover)
+        ),
+      child: 
+       ListView(children: [
+
+        Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
       Row(mainAxisAlignment: MainAxisAlignment.start,children: [
       Builder(builder: (context) => Container(
         child:  TextButton(
@@ -51,37 +56,41 @@ class _Home_page extends State<Home_page> {
       Container(child:Image(image: AssetImage('assets/LogoDoAn.png'),fit: BoxFit.cover,) ,width: 300,height: 300,),
 
       Padding(padding: EdgeInsets.fromLTRB(0, 5, 0, 5),child: 
-      TextButton(
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(104, 176, 171,1)),
-          foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-          minimumSize: MaterialStateProperty.all<Size>(Size(200, 75)),
-          elevation: MaterialStateProperty.all<double>(8),
-          shadowColor: MaterialStateProperty.all<Color>(Colors.blue.withOpacity(0.5))
-        ),
-        onPressed: (){
-          Navigator.of(context).popUntil((route) => route.isCurrent);
+      Container(
+                width: 250,
+                height: 80,
+                decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/btn2.png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                child: TextButton(onPressed: () {
+                   Navigator.of(context).popUntil((route) => route.isCurrent);
            Navigator.push(context,
                 new MaterialPageRoute(builder: (context) => new Single_play()));
-        }, 
-        child: Text('Chơi đơn',style: TextStyle(fontSize: 20),))
+                },
+                child: Text('Chơi Đơn',style: TextStyle(fontSize: 25,fontFamily: 'MyFont',color: Colors.brown),),),
+              )
       ,),
 
       Padding(padding: EdgeInsets.fromLTRB(0, 0, 0, 5),child: 
-         TextButton(
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all<Color>(Color.fromRGBO(104, 176, 171,1)),
-          foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-          minimumSize: MaterialStateProperty.all<Size>(Size(200, 75)),
-          elevation: MaterialStateProperty.all<double>(8),
-          shadowColor: MaterialStateProperty.all<Color>(Colors.blue.withOpacity(0.5))
-        ),
-        onPressed: (){
-          Navigator.of(context).popUntil((route) => route.isCurrent);
+        Container(
+                width: 250,
+                height: 80,
+                decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/btn2.png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                child: TextButton(onPressed: () {
+                   Navigator.of(context).popUntil((route) => route.isCurrent);
            Navigator.push(context,
                 new MaterialPageRoute(builder: (context) => new pvp_page()));
-        }, 
-        child: Text('Đối Kháng',style: TextStyle(fontSize: 20),))
+                },
+                child: Text('Đối Kháng',style: TextStyle(fontSize: 25,fontFamily: 'MyFont',color: Colors.brown),),),
+              )
          ,),
 
 
@@ -135,10 +144,29 @@ class _Home_page extends State<Home_page> {
         ),
 
 
-         Padding(padding: EdgeInsets.all(7),child:  Icon(Icons.settings,size: 35,),)
+         Padding(padding: EdgeInsets.all(7),child:  
+          Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/setting1.png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                child: TextButton(onPressed: () {
+                   Navigator.of(context).popUntil((route) => route.isCurrent);
+           Navigator.push(context,
+                new MaterialPageRoute(builder: (context) => new Setting_page()));
+                },
+                child: Text(''),),
+              )
+         )
          ],)
 
     ],)
+
+       ],)
 
 
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:giai_do_ech_xanh/view/History_page.dart';
 import 'package:giai_do_ech_xanh/view/Home_page.dart';
 import 'package:giai_do_ech_xanh/view/Signup_page.dart';
 class Account_page extends StatefulWidget {
@@ -23,6 +24,22 @@ class _Account_page extends State<Account_page> {
         constraints: BoxConstraints.expand(),
         color: Color.fromRGBO(250, 243,221, 1),
         child: Column(children: [
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end ,
+            children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: IconButton(
+              onPressed: (){
+                Navigator.of(context).pop();
+              }, 
+              icon: Icon(Icons.close,size: 45,)
+              ),
+            ),
+            ],),
+
+
           SizedBox(height: 20,),
           Text('THÔNG TIN\nTÀI KHOẢN',style: TextStyle(color: Colors.red,fontSize: 20),),
           
@@ -110,7 +127,9 @@ Row(mainAxisAlignment: MainAxisAlignment.center,
                 )
               )
             ),
-            onPressed: () => {},child: Text("Lịch sử",style: TextStyle(fontSize: 18)),
+            onPressed: () => {
+               Navigator.push(context,new MaterialPageRoute(builder: (context) => new History()))
+            },child: Text("Lịch sử",style: TextStyle(fontSize: 18)),
         ),
          )
         

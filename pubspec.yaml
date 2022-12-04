@@ -38,7 +38,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_spinkit: ^5.1.0
   lottie: ^2.0.0
-
+  firebase_auth: ^4.1.5
+  cloud_firestore: ^4.1.0
+  firebase_core: ^2.3.0
+  firebase_database: ^10.0.6
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -64,7 +68,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/LogoDoAn.png
-    - assets/menu1.jpg
+    - assets/menu_final.jpg
     - assets/First.jpg
     - assets/pvp.png
     - assets/frog.json
@@ -75,6 +79,9 @@ flutter:
     - assets/fish1.png
     - assets/fish2.png
     - assets/fish3.png
+    - assets/btn2.png
+    - assets/background.jpg
+    - assets/setting1.png
   
   fonts:
     - family: MyFont     
