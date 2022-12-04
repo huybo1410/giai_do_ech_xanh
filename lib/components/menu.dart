@@ -1,14 +1,16 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:giai_do_ech_xanh/view/Account_page.dart';
 
 import 'package:giai_do_ech_xanh/view/Home_page.dart';
 
 
-import 'package:giai_do_ech_xanh/view/Login_page.dart';
+
 import 'package:giai_do_ech_xanh/view/Report_page.dart';
 import 'package:giai_do_ech_xanh/view/Setting_page.dart';
-import 'package:giai_do_ech_xanh/view/Signup_page.dart';
-import 'package:giai_do_ech_xanh/view/Single_play.dart';
+
+
 
 class Menu_button extends StatelessWidget {
   const Menu_button({super.key});
@@ -121,7 +123,8 @@ class Menu_button extends StatelessWidget {
             TextButton(
               child: const Text('thoát',style: TextStyle(fontSize: 15),),
               onPressed: () {
-                Navigator.of(context).pop();
+                FirebaseAuth.instance.signOut();
+                Navigator.pushNamedAndRemoveUntil(context, 'Welcome', (route) => false);
               },
             ),
             

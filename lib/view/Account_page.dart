@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:giai_do_ech_xanh/view/History_page.dart';
 import 'package:giai_do_ech_xanh/view/Home_page.dart';
 import 'package:giai_do_ech_xanh/view/Signup_page.dart';
 class Account_page extends StatefulWidget {
@@ -126,7 +127,9 @@ Row(mainAxisAlignment: MainAxisAlignment.center,
                 )
               )
             ),
-            onPressed: () => {},child: Text("Lịch sử",style: TextStyle(fontSize: 18)),
+            onPressed: () => {
+               Navigator.push(context,new MaterialPageRoute(builder: (context) => new History()))
+            },child: Text("Lịch sử",style: TextStyle(fontSize: 18)),
         ),
          )
         

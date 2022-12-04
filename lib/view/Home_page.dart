@@ -31,7 +31,9 @@ class _Home_page extends State<Home_page> {
         image: DecorationImage(image: AssetImage('assets/background.jpg'),fit: BoxFit.cover)
         ),
       child: 
-       Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
+       ListView(children: [
+
+        Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
       Row(mainAxisAlignment: MainAxisAlignment.start,children: [
       Builder(builder: (context) => Container(
         child:  TextButton(
@@ -163,6 +165,8 @@ class _Home_page extends State<Home_page> {
          ],)
 
     ],)
+
+       ],)
 
 
 
