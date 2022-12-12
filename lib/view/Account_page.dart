@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:giai_do_ech_xanh/view/History_page.dart';
 import 'package:giai_do_ech_xanh/view/Home_page.dart';
@@ -17,7 +18,7 @@ class _Account_page extends State<Account_page> {
 
   @override
   Widget build(BuildContext context) {
-    
+    final user = FirebaseAuth.instance.currentUser!;
     return Scaffold(
       
       body:  Container(
@@ -66,7 +67,7 @@ class _Account_page extends State<Account_page> {
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(80, 0, 0, 0),
-                child: Text('admin123@email.com',style: TextStyle(fontSize: 18),),
+                child: Text(user.email!,style: TextStyle(fontSize: 18),),
               ),
             ],
           ),
