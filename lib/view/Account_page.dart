@@ -16,6 +16,7 @@ class Account_page extends StatefulWidget {
 class _Account_page extends State<Account_page> {
   
 
+  
   @override
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser!;
