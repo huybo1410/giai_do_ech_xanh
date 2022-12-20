@@ -3,6 +3,7 @@ import 'package:giai_do_ech_xanh/components/menu.dart';
 import 'package:giai_do_ech_xanh/main.dart';
 import 'package:giai_do_ech_xanh/view/Setting_page.dart';
 import 'package:giai_do_ech_xanh/view/Single_play.dart';
+import 'package:giai_do_ech_xanh/view/demo1.dart';
 import 'package:giai_do_ech_xanh/view/pay_page.dart';
 import 'package:giai_do_ech_xanh/view/pvp_page.dart';
 
@@ -66,7 +67,7 @@ class _Home_page extends State<Home_page> {
                child: TextButton(onPressed: () {
                   Navigator.of(context).popUntil((route) => route.isCurrent);
           Navigator.push(context,
-               new MaterialPageRoute(builder: (context) => new Single_play()));
+               new MaterialPageRoute(builder: (context) => new demo1()));
                },
                child: Text('Chơi Đơn',style: TextStyle(fontSize: 25,fontFamily: 'MyFont',color: Colors.brown),),),
              )
