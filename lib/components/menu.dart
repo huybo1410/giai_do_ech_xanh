@@ -9,7 +9,7 @@ import 'package:giai_do_ech_xanh/view/Home_page.dart';
 
 import 'package:giai_do_ech_xanh/view/Report_page.dart';
 import 'package:giai_do_ech_xanh/view/Setting_page.dart';
-import 'package:giai_do_ech_xanh/view/demo.dart';
+
 
 
 

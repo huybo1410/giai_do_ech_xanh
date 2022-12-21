@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:giai_do_ech_xanh/components/menu.dart';
 import 'package:giai_do_ech_xanh/view/GamePlay.dart';
@@ -11,6 +13,7 @@ class Single_play extends StatefulWidget {
 
 
 class _Single_play extends State<Single_play> {
+ 
  
  
 
@@ -56,7 +59,9 @@ class _Single_play extends State<Single_play> {
                         ),
                       ),
                 child: TextButton(onPressed: () {
-                  
+                  Navigator.of(context).popUntil((route) => route.isCurrent);
+          Navigator.push(context,
+               new MaterialPageRoute(builder: (context) => new GamePlay()));
                 },
                 child: Text('1',style: TextStyle(fontSize: 30,color: Colors.black),),),
               )
