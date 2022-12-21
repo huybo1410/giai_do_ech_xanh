@@ -124,8 +124,7 @@ class Menu_button extends StatelessWidget {
             TextButton(
               child: const Text('thoát',style: TextStyle(fontSize: 15),),
               onPressed: () {
-                FirebaseAuth.instance.signOut();
-                Navigator.pushNamedAndRemoveUntil(context, 'Welcome', (route) => false);
+                
               },
             ),
             
@@ -169,7 +168,10 @@ class Menu_button extends StatelessWidget {
         padding: const EdgeInsets.all(10.0),
         child: ListTile(
         title: Text('Đăng xuất',style: TextStyle(fontSize: 17)),leading: Icon(Icons.logout,color: Colors.black),
-        onTap: () => FirebaseAuth.instance.signOut(),
+        onTap: () {
+                FirebaseAuth.instance.signOut();
+                Navigator.pushNamedAndRemoveUntil(context, 'Welcome', (route) => false);
+              },
         ),
       ),
 

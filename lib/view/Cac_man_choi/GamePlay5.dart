@@ -3,28 +3,36 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:giai_do_ech_xanh/components/menu.dart';
 import 'package:giai_do_ech_xanh/main.dart';
+import 'package:giai_do_ech_xanh/read_data/get_question1.dart';
+import 'package:giai_do_ech_xanh/read_data/get_question3.dart';
+import 'package:giai_do_ech_xanh/read_data/get_question4.dart';
+import 'package:giai_do_ech_xanh/read_data/get_question5.dart';
 
-import '../read_data/get_question.dart';
+import '../../read_data/get_question.dart';
+import '../../read_data/get_question2.dart';
 
-class GamePlay extends StatefulWidget {
-  const GamePlay({super.key});
+class GamePlay5 extends StatefulWidget {
+  const GamePlay5({super.key});
   
   @override
-  State<GamePlay> createState() =>_GamePlay();
+  State<GamePlay5> createState() =>_GamePlay5();
 }
 
-class _GamePlay extends State<GamePlay> {
+class _GamePlay5 extends State<GamePlay5> {
   Color c1 = Color.fromARGB(255, 245, 233, 66);
 final user = FirebaseAuth.instance.currentUser;
   List<String> docIDs = [];
   Future getDocId() async{
-    await FirebaseFirestore.instance.collection('single').get().then((snapshot) => snapshot.docs.forEach((element) {
+    await FirebaseFirestore.instance.collection('man6').get().then((snapshot) => snapshot.docs.forEach((element) {
       print(element.reference);
       docIDs.add(element.reference.id);
 
     }));
 
   }
+   
+      
+
   
 
   @override
@@ -140,13 +148,13 @@ final user = FirebaseAuth.instance.currentUser;
 
 
          FutureBuilder(
-              future: getDocId(),
+              future:getDocId(),
               builder: ((context, snapshot) {
               return ListView.builder(
               shrinkWrap: true,
               itemCount: docIDs.length,
               itemBuilder: (context, index) {
-              return Get_question(documentId: docIDs[0],);
+              return Get_question5(documentId: docIDs[index],);
             },
             );
             })
@@ -154,7 +162,7 @@ final user = FirebaseAuth.instance.currentUser;
          
 
            Padding(
-             padding: const EdgeInsets.all(60),
+             padding: const EdgeInsets.all(50),
              child: Container(),
            ),
 

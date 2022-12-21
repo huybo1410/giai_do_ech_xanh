@@ -48,7 +48,7 @@ class _Signup_page extends State<Signup_page> {
     }
 
     Future addUserDetails(String name,String phone, String email )async{
-      await FirebaseFirestore.instance.collection('user').add({
+      await FirebaseFirestore.instance.collection('1User').add({
         'name':name,
         'phone':phone,
         'email':email

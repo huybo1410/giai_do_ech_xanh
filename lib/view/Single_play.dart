@@ -2,7 +2,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:giai_do_ech_xanh/components/menu.dart';
-import 'package:giai_do_ech_xanh/view/GamePlay.dart';
+import 'package:giai_do_ech_xanh/view/Cac_man_choi/GamePlay.dart';
+import 'package:giai_do_ech_xanh/view/Cac_man_choi/GamePlay1.dart';
+import 'package:giai_do_ech_xanh/view/Cac_man_choi/GamePlay2.dart';
+import 'package:giai_do_ech_xanh/view/Cac_man_choi/GamePlay3.dart';
+import 'package:giai_do_ech_xanh/view/Cac_man_choi/GamePlay4.dart';
+import 'package:giai_do_ech_xanh/view/Cac_man_choi/GamePlay5.dart';
 import 'package:giai_do_ech_xanh/view/pay_page.dart';
 
 class Single_play extends StatefulWidget {
@@ -86,7 +91,9 @@ class _Single_play extends State<Single_play> {
                         ),
                       ),
                 child: TextButton(onPressed: () {
-                  
+                   Navigator.of(context).popUntil((route) => route.isCurrent);
+          Navigator.push(context,
+               new MaterialPageRoute(builder: (context) => new GamePlay1()));
                 },
                 child: Text('2',style: TextStyle(fontSize: 30,color: Colors.black),),),
               )
@@ -115,7 +122,9 @@ class _Single_play extends State<Single_play> {
                         ),
                       ),
                 child: TextButton(onPressed: () {
-                  
+                   Navigator.of(context).popUntil((route) => route.isCurrent);
+          Navigator.push(context,
+               new MaterialPageRoute(builder: (context) => new GamePlay3()));
                 },
                 child: Text('4',style: TextStyle(fontSize: 30,color: Colors.black),),),
               )
@@ -140,7 +149,9 @@ class _Single_play extends State<Single_play> {
                         ),
                       ),
                 child: TextButton(onPressed: () {
-                  
+                  Navigator.of(context).popUntil((route) => route.isCurrent);
+          Navigator.push(context,
+               new MaterialPageRoute(builder: (context) => new GamePlay2()));
                 },
                 child: Text('3',style: TextStyle(fontSize: 30,color: Colors.black),),),
               )
@@ -169,7 +180,9 @@ class _Single_play extends State<Single_play> {
                         ),
                       ),
                 child: TextButton(onPressed: () {
-                  
+                  Navigator.of(context).popUntil((route) => route.isCurrent);
+          Navigator.push(context,
+               new MaterialPageRoute(builder: (context) => new GamePlay4()));
                 },
                 child: Text('5',style: TextStyle(fontSize: 30,color: Colors.black),),),
               )
@@ -194,7 +207,9 @@ class _Single_play extends State<Single_play> {
                         ),
                       ),
                 child: TextButton(onPressed: () {
-                  
+                  Navigator.of(context).popUntil((route) => route.isCurrent);
+          Navigator.push(context,
+               new MaterialPageRoute(builder: (context) => new GamePlay5()));
                 },
                 child: Text('6',style: TextStyle(fontSize: 30,color: Colors.black),),),
               )

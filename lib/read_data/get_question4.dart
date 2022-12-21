@@ -1,13 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:giai_do_ech_xanh/view/Cac_man_choi/GamePlay.dart';
-class Get_question extends StatelessWidget {
-  const Get_question({super.key, required this.documentId});
+class Get_question4  extends StatelessWidget {
+  const Get_question4 ({super.key, required this.documentId});
   final String documentId;
 
   @override
   Widget build(BuildContext context) {
-  CollectionReference question = FirebaseFirestore.instance.collection('man1');
+  CollectionReference question = FirebaseFirestore.instance.collection('man5');
 
     return FutureBuilder<DocumentSnapshot>(
       future: question.doc(documentId).get(),
@@ -22,7 +22,7 @@ class Get_question extends StatelessWidget {
 
       Padding(
         padding: const EdgeInsets.fromLTRB(8, 8, 8, 15),
-        child: Container(child: Text('${data['question']}',textAlign: TextAlign.center,style: TextStyle(fontSize: 25))),
+        child: Container(child: Text('${data['question']}',overflow: TextOverflow.fade,textAlign: TextAlign.center,style: TextStyle(fontSize: 25))),
       ),
 
       Padding(
