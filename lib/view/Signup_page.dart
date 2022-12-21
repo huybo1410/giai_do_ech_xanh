@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_database/ui/firebase_sorted_list.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -11,7 +13,7 @@ class Signup_page extends StatefulWidget {
 
 class _Signup_page extends State<Signup_page> {
  
- bool isChecked=true;
+
  
 
     TextEditingController _nameController =  TextEditingController();
@@ -20,7 +22,46 @@ class _Signup_page extends State<Signup_page> {
     TextEditingController _repassController =  TextEditingController();
     TextEditingController _phoneController =  TextEditingController();
     final _auth = FirebaseAuth.instance;
-  
+    @override
+    void dispose(){
+      _emailController.dispose();
+      _passController.dispose();
+      _repassController.dispose();
+      _nameController.dispose();
+      _phoneController.dispose();
+      super.dispose();
+    }
+    Future SignUp()async{
+     if(PasswordConfirmed()){
+       await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: _emailController.text.trim(), 
+        password: _passController.text.trim()
+        );
+     }
+
+     addUserDetails(
+      _nameController.text.trim(),
+      _phoneController.text.trim(),
+      _emailController.text.trim()
+     );
+
+    }
+
+    Future addUserDetails(String name,String phone, String email )async{
+      await FirebaseFirestore.instance.collection('user').add({
+        'name':name,
+        'phone':phone,
+        'email':email
+      });
+    }
+
+    bool PasswordConfirmed(){
+      if(_passController.text.trim() == _repassController.text.trim()){
+        return true;
+      }else{
+        return false;
+      }
+    }
   
   @override
   Widget build(BuildContext context) {
@@ -59,7 +100,7 @@ class _Signup_page extends State<Signup_page> {
               controller: _nameController,
               style: TextStyle(fontSize: 15),
               decoration: InputDecoration(
-                labelText: 'Tài khoản',
+                labelText: 'Họ và tên',
                 border: OutlineInputBorder(borderRadius: 
                  BorderRadius.circular(10)
              ),
@@ -69,6 +110,23 @@ class _Signup_page extends State<Signup_page> {
             ),
           ),width: 350,height: 50,
         ),
+
+        Container(
+           child: Padding(
+             padding: const EdgeInsets.all(8.0),
+             child: TextField(
+              controller: _emailController,
+              keyboardType: TextInputType.emailAddress,
+              style: TextStyle(fontSize: 15),
+              decoration: InputDecoration(
+                labelText: 'Email',
+               border: OutlineInputBorder(borderRadius: 
+                 BorderRadius.circular(10)
+               )
+                ),
+        ),
+           ),width: 350,height: 50,
+         ),
 
          Container(
            child: Padding(
@@ -122,37 +180,9 @@ class _Signup_page extends State<Signup_page> {
            ),width: 350,height: 50,
          ),
 
-         Container(
-           child: Padding(
-             padding: const EdgeInsets.all(8.0),
-             child: TextField(
-              controller: _emailController,
-              keyboardType: TextInputType.emailAddress,
-              style: TextStyle(fontSize: 15),
-              decoration: InputDecoration(
-                labelText: 'Email',
-               border: OutlineInputBorder(borderRadius: 
-                 BorderRadius.circular(10)
-               )
-                ),
-        ),
-           ),width: 350,height: 50,
-         ),
+         
 
-        Container(
-          child: Row(children: [Checkbox(
-            checkColor: Colors.white,
-            value: isChecked,
-            onChanged: (bool? value){
-              setState(() {
-                isChecked = value!;
-              });
-            },
-          ),
-          Text('chấp nhận đăng kí tài khoản'),
-          ],
-          ),width: 350,height: 50,
-        ),
+        
 
         Padding(padding: EdgeInsets.fromLTRB(0, 5, 0, 5)),
              ElevatedButton(
@@ -166,22 +196,7 @@ class _Signup_page extends State<Signup_page> {
               )
             )
           ),
-          onPressed: () async{
-
-            try{
-              final newUser = _auth.createUserWithEmailAndPassword(email: _emailController.text, password: _passController.text);
-              if(newUser !=null){
-                Navigator.pop(context,'Dang ky thanh cong!');
-              }else{
-                final snackBar = SnackBar(content: Text('Tai khoan nay khong hop le'));
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
-              }
-            }catch(e){
-              final snackBar = SnackBar(content: Text('Co loi xay ra !'));
-              ScaffoldMessenger.of(context).showSnackBar(snackBar);
-            }
-
-          },
+          onPressed: SignUp,
           child: const Padding(padding: EdgeInsets.fromLTRB(18, 13, 18, 13),
           child: Text("ĐĂNG KÝ",),
           ),
