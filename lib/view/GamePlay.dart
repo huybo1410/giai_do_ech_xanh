@@ -14,7 +14,7 @@ class GamePlay extends StatefulWidget {
 }
 
 class _GamePlay extends State<GamePlay> {
-  
+  Color c1 = Color.fromARGB(255, 245, 233, 66);
 final user = FirebaseAuth.instance.currentUser;
   List<String> docIDs = [];
   Future getDocId() async{
@@ -39,7 +39,85 @@ final user = FirebaseAuth.instance.currentUser;
       Column(mainAxisAlignment: MainAxisAlignment.start, children: [
         Row(children: [
           IconButton(onPressed: (){
-            
+            showDialog(
+              context: context, 
+              builder: (context) => SimpleDialog(
+                backgroundColor: c1,
+                title:  Container(
+                  height: 30,
+                  width: 60,
+                  color: Colors.brown,
+                  child:
+                Text('PAUSE',style: TextStyle(color: Colors.white),textAlign: TextAlign.center,)),
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(80, 0, 80, 0),
+                    child: TextButton(
+                      onPressed: (){
+                        Navigator.of(context).pop();
+                      },
+                      child: Text('Resume',style: TextStyle(fontSize: 18,color: Colors.white),),
+                      style: ButtonStyle(
+                        padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(10)),
+                        foregroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                        backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                       RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                        side: BorderSide(color: Colors.white)
+                       )
+                        ),
+                      ),
+                      ),
+                  ),
+                 SizedBox(height: 10,),
+
+                     Padding(
+                       padding: const EdgeInsets.fromLTRB(80, 0, 80, 0),
+                       child: TextButton(
+                    onPressed: (){
+                        Navigator.of(context).pop();
+                    },
+                    child: Text('Replay',style: TextStyle(fontSize: 18,color: Colors.white),),
+                       style: ButtonStyle(
+                          padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(10)),
+                          foregroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                          backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                         RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          side: BorderSide(color: Colors.white)
+                         )
+                          ),
+                        ),
+                    ),
+                     ),
+                SizedBox(height: 10,),
+
+                     Padding(
+                       padding: const EdgeInsets.fromLTRB(80, 0, 80, 0),
+                       child: TextButton(
+                    onPressed: (){
+                        Navigator.of(context).pop();
+                    },
+                    child: Text('Exit',style: TextStyle(fontSize: 18,color: Colors.white),),
+                       style: ButtonStyle(
+                          padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(10)),
+                          foregroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                          backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(221, 163, 160, 160)),
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                         RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          side: BorderSide(color: Colors.white),
+                         )
+                          ),
+                        ),
+                    ),
+                     )
+                ],
+              )
+              
+              );
           }, icon: Icon(Icons.pause,size: 45,))
         ],),
         
