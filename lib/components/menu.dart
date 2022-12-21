@@ -9,6 +9,7 @@ import 'package:giai_do_ech_xanh/view/Home_page.dart';
 
 import 'package:giai_do_ech_xanh/view/Report_page.dart';
 import 'package:giai_do_ech_xanh/view/Setting_page.dart';
+import 'package:giai_do_ech_xanh/view/demo.dart';
 
 
 
@@ -168,9 +169,7 @@ class Menu_button extends StatelessWidget {
         padding: const EdgeInsets.all(10.0),
         child: ListTile(
         title: Text('Đăng xuất',style: TextStyle(fontSize: 17)),leading: Icon(Icons.logout,color: Colors.black),
-        onTap: (() {
-           Navigator.of(context).popUntil((route) => route.isFirst);
-        }),
+        onTap: () => FirebaseAuth.instance.signOut(),
         ),
       ),
 
